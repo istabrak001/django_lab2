@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card shadow-sm">
+    <div class="card-body">
+        <h2 class="card-title mb-4">Add Trainee</h2>
+        <form method="POST" class="needs-validation" novalidate>
+            {% csrf_token %}
+            <div class="mb-3">
+                <input type="text" class="form-control" name="name" placeholder="Trainee Name" required>
+            </div>
+            <div class="mb-3">
+                <input type="number" class="form-control" name="age" placeholder="Trainee Age" required>
+            </div>
+            <div class="mb-3">
+                <input type="email" class="form-control" name="email" placeholder="Trainee Email" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Trainee</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
